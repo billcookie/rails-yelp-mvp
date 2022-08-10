@@ -6,8 +6,6 @@
 
 <div class="container">
 
-
-
 <h1><%= @restaurant.name %></h1>
 
 <div class="card-product">
@@ -17,6 +15,10 @@
     <p><%= @restaurant.phone_number %></p>
   </div>
 </div>
+
+
+<h2>Menu</h2>
+
 
 <%= link_to "Add Review!", new_restaurant_review_path(@restaurant), class: "btn btn-flat" %>
 

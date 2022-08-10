@@ -6,11 +6,11 @@ Restaurant.destroy_all
 
 puts 'Creating amazin restaurants....'
 
-20.times do
+35.times do
   Restaurant.create!(
-    name: Faker::Movies::StarWars.planet,
-    address: Faker::Address.full_address,
-    phone_number: Faker::PhoneNumber.phone_number_with_country_code,
+    name: Faker::Movies::StarWars.unique.planet,
+    address: Faker::Address.unique.full_address,
+    phone_number: Faker::PhoneNumber.unique.phone_number_with_country_code,
     category: Restaurant::CATEGORY.sample
   )
 end

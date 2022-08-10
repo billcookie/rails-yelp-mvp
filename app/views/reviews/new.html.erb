@@ -1,11 +1,17 @@
 <%= render 'restaurants/header' %>
-<%= simple_form_for [@restaurant, @review] do |f| %>
-  <%= f.input :content%>
-  <!-- remove (f.input :rating) inside of your simple_form_for and add this -->
-  <div class="star-rating">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(http://source.unsplash.com/featured/?<%= @restaurant.category.downcase %>&<%= rand(1000) %>/800x333);">
+  <div class="container">
+  </div>
+</div>
+<div class="container">
+  <h1>Add your review!</h1>
+  <%= simple_form_for [@restaurant, @review] do |f| %>
+    <%= f.input :content%>
+    <!-- remove (f.input :rating) inside of your simple_form_for and add this -->
+    <div class="star-rating">
     <% 5.times do |i| %>
       <input type="radio" name="review[rating]" value="<%= i + 1 %>" <%= "checked" if i == 2 %> />
     <% end %>
-  </div>
+    </div>
   <%= f.submit "Submit review", class: "btn btn-primary" %>
-<% end %>
+<% end %></div>
