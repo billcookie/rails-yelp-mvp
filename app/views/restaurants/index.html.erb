@@ -3,11 +3,12 @@
   <div class="container">
     <h1>Palpy Eats brings <strong>great food</strong> to <strong>hungry people</strong>!</h1>
     <p>Change your life and have great food from one of our great restaurants.</p>
-    <a class="btn btn-flat" href="#">Apply now</a>
+    <%= link_to "Add New Restaurant!", new_restaurant_path(@restaurant), class: "btn btn-flat" %>
   </div>
 </div>
 
-<div class="cards">
+<div class="container">
+  <div class="cards">
   <% @restaurants.each do |restaurant| %>
     <%= link_to restaurant_path(restaurant) do %>
 
@@ -16,4 +17,6 @@
       </div>
     <% end %>
   <% end %>
+  </div>
 </div>
+<%= render 'restaurants/footer' %>

@@ -17,7 +17,17 @@
 </div>
 
 
-<h2>Menu</h2>
+<h2>Selected Menu</h2>
+<div class="cards" style="margin-bottom: 10px;">
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(http://source.unsplash.com/featured/?food&<%= rand(1000) %>)">
+  </div>
+
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(http://source.unsplash.com/featured/?food&<%= rand(1000) %>)">
+  </div>
+
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(http://source.unsplash.com/featured/?food&<%= rand(1000) %>)">
+  </div>
+</div>
 
 
 <%= link_to "Add Review!", new_restaurant_review_path(@restaurant), class: "btn btn-flat" %>
@@ -39,3 +49,4 @@
   </div>
 <% end %>
 </div>
+<%= render 'restaurants/footer' %>
