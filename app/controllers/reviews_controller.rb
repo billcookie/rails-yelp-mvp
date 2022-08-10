@@ -1,12 +1,11 @@
 class ReviewsController < ApplicationController
+  before_action :set_restaurant, only: %i[new create]
   def new
-    set_restaurant
     @review = Review.new
   end
 
   def create
     @review = Review.new(review_params)
-    set_restaurant
     @review.restaurant = @restaurant
     if @review.save
       redirect_to restaurant_path(@restaurant)

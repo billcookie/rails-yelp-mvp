@@ -1,11 +1,19 @@
-<h1>Restaurants#index</h1>
-<p>Find me in app/views/restaurants/index.html.erb</p>
+<%= render 'restaurants/header' %>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1659800827090-dbebe808b77c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY2MDExMjAzOQ&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080">
+  <div class="container">
+    <h1>Palpy Eats brings <strong>great food</strong> to <strong>hungry people</strong>!</h1>
+    <p>Change your life and have great food from one of our great restaurants.</p>
+    <a class="btn btn-flat" href="#">Apply now</a>
+  </div>
+</div>
 
-<% @restaurants.each do |restaurant| %>
-  <ul>
-    <%= link_to restaurant.name, restaurant_path(restaurant) %>
-    <%= restaurant.category %>
-    <%= restaurant.address %>
-    <%= restaurant.phone_number %>
-  </ul>
-<% end %>
+<div class="cards">
+  <% @restaurants.each do |restaurant| %>
+    <%= link_to restaurant_path(restaurant) do %>
+
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(http://source.unsplash.com/featured/?<%= restaurant.category %>&<%= rand(1000) %>)">
+        <%= restaurant.name %>
+      </div>
+    <% end %>
+  <% end %>
+</div>
