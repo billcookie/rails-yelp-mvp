@@ -5,6 +5,4 @@ class Restaurant < ApplicationRecord
   validates :category, inclusion: { in: CATEGORY }
 end
 
-
-
 # When a restaurant is destroyed, all of its reviews must be destroyed as well.

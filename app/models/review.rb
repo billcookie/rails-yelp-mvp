@@ -1,13 +1,9 @@
 class Review < ApplicationRecord
   belongs_to :restaurant
-
   validates :rating, :content, presence: true
   validates :rating, numericality: { only_integer: true }
   validates :rating, inclusion: 0..5
-
 end
-
-
 
 # A review must have a content.
 # A review must have a rating.
