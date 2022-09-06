@@ -1,24 +1,63 @@
-# README
+# 🍱 Yelp Clone
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A Yelp clone that allows users to add new restaurants and add reviews to restaurants. 
 
-Things you may want to cover:
 
-* Ruby version
+<br>
+App home: 
+   
 
-* System dependencies
+## Getting Started
+### Setup
 
-* Configuration
+Install gems
+```
+bundle install
+```
+Install JS packages
+```
+yarn install
+```
 
-* Database creation
+### ENV Variables
+Create `.env` file
+```
+touch .env
+```
+Inside `.env`, set these variables. For any APIs, see group Slack channel.
+```
+CLOUDINARY_URL=your_own_cloudinary_url_key
+```
 
-* Database initialization
+### DB Setup
+```
+rails db:create
+rails db:migrate
+rails db:seed
+```
 
-* How to run the test suite
+### Run a server
+```
+rails s
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+## Built With
+- [Rails 7](https://guides.rubyonrails.org/) - Backend / Front-end
+- [Stimulus JS](https://stimulus.hotwired.dev/) - Front-end JS
+- [Heroku](https://heroku.com/) - Deployment
+- [PostgreSQL](https://www.postgresql.org/) - Database
+- [Bootstrap](https://getbootstrap.com/) — Styling
+- [Figma](https://www.figma.com) — Prototyping
 
-* Deployment instructions
+## Acknowledgements
+Inspired by Jane Mount's [Bibliophile](https://www.amazon.com/Bibliophile-Illustrated-Miscellany-Jane-Mount/dp/1452167230) and a story my father once told me: "Why do we keep books? ... We keep books because they remind us of the new perspectives and lessons we learned".
 
-* ...
+## Team Members
+- [Bill Cook](https://www.linkedin.com/in/bill--cook/)
+
+
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+## License
+This project is licensed under the MIT License
